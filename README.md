@@ -45,7 +45,8 @@ How to use it
     
   (Here the dependencies of dependencies will also be injected as well) 
 
-    
+
+  
 Notice: 
   As there is no access to parameters of methods directly,  
   any needed values can be passed throuth one(1) array of
@@ -83,4 +84,4 @@ Developed by Ehsan Yousefi <mailbox5517@gmail.com> [https://fsdeveloper.ir]
  
 Updates
 -------
-11/4/2019 'version 1.0 first Release' - Backwards incompatible
+11/4/2019 'version 1.0.0 first Release' - Backwards incompatible
