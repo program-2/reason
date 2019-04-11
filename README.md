@@ -21,10 +21,10 @@ Just include it to your project.
 
 How to use it
 -------------
-1-Load Reason along with all dependency classes in your project.
+1- Load Reason along with all dependency classes in your project.
 
 
-2-Put "Reason $Reason" as parameter of the method: 
+2- Put "Reason $Reason" as parameter of the method: 
       
       public function My_Method(Reason $Reason)
       {
@@ -32,14 +32,14 @@ How to use it
       }
 
       
-3-Instantiate the methods where/when needed with "Reason":
+3- Instantiate the methods where/when needed with "Reason":
     
-    ((new Reason)->inject('Class','Method'));
+      ((new Reason)->inject('Class','Method'));
     
 
-4-Inside the methods use injected $Reason object to get an instance of any dependency:
+4- Inside the methods use injected $Reason object to get an instance of any dependency:
 
-    $Reason->inject('Class','Method');
+      $Reason->inject('Class','Method');
     
   (Here the dependencies of dependencies will also be injected as well) 
 
@@ -47,18 +47,27 @@ How to use it
 Notice: As you don't have access to pass parameters of methods directly,  
   any needed values can be passed throuth one(1) array of
   keys/values as the third(3rd) parameter position:
-      ((new Reason)->inject('Class', 'Method', array('john'=>'4')));
+  
+       ((new Reason)->inject('Class', 'Method', array('john'=>'4')));
+       
   and when injected into objects:  
-     $Reason->inject('Class', 'Method', array('john'=>'4'));   
+  
+       $Reason->inject('Class', 'Method', array('john'=>'4'));   
+       
   then accessible:    
-    $john;
+  
+       $john;
  
  
 Notice:It is possible to pass Reason Manually as any of the parameter
   of the method if the method accepts any paratemer:
-    ((new Reason)->inject('Class'))->Method(new Reason);
+  
+       ((new Reason)->inject('Class'))->Method(new Reason);
+       
   or make it inside a method of a class:  
-    $reason = new Reason;
+  
+       $reason = new Reason;
+       
   and reservinge the parameters place for the programing purpose.
   these ways increase the coupling degree a little.
   
@@ -70,4 +79,4 @@ Developed by Ehsan Yousefi <mailbox5517@gmail.com> [https://fsdeveloper.ir]
  
 Updates
 -------
-8/4/2019 1.0 first Release - Backwards incompatible
+11/4/2019 'version 1.0 first Release' - Backwards incompatible
