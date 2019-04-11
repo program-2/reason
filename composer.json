@@ -1,0 +1,7 @@
+{
+    "name": "mybestways/reason",
+    "description": "A PHP Dependency Injection Container",
+    "require": {
+        "php": "^7.2"
+    }
+}
