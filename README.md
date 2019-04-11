@@ -9,22 +9,24 @@ that uses reflection.
 
 Aims
 -----
-1-to be as small as possible.
-2-to be able to handle the dependency of a dependency. 
-3-to be fast. reflection is much faster than annotation.
+1 - to be as small as possible.
+
+2 - to be able to handle the dependency of a dependency. 
+
+3 - to be fast. reflection is much faster than annotation.
 
 
 Instalation
 -----------
-Just include it to your project.
+Just include it to the project.
 
 
 How to use it
 -------------
-1- Load Reason along with all dependency classes in your project.
+1 - Load Reason along with all dependency classes in your project.
 
 
-2- Put "Reason $Reason" as parameter of the method: 
+2 - Put "Reason $Reason" as parameter of the method: 
       
       public function My_Method(Reason $Reason)
       {
@@ -32,34 +34,36 @@ How to use it
       }
 
       
-3- Instantiate the methods where/when needed with "Reason":
+3 - Instantiate the methods where/when needed with "Reason":
     
       ((new Reason)->inject('Class','Method'));
     
 
-4- Inside the methods use injected $Reason object to get an instance of any dependency:
+4 - Inside the methods use injected $Reason object to get an instance of any dependency:
 
       $Reason->inject('Class','Method');
     
   (Here the dependencies of dependencies will also be injected as well) 
 
     
-Notice: As you don't have access to pass parameters of methods directly,  
+Notice: 
+  As there is no access to parameters of methods directly,  
   any needed values can be passed throuth one(1) array of
   keys/values as the third(3rd) parameter position:
   
        ((new Reason)->inject('Class', 'Method', array('john'=>'4')));
        
-  and when injected into objects:  
+  or when injected into objects with:  
   
        $Reason->inject('Class', 'Method', array('john'=>'4'));   
        
-  then accessible:    
+  and then accessible in destination with:    
   
        $john;
  
  
-Notice:It is possible to pass Reason Manually as any of the parameter
+Notice:
+  It is possible to pass Reason Manually as any of the parameter
   of the method if the method accepts any paratemer:
   
        ((new Reason)->inject('Class'))->Method(new Reason);
