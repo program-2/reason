@@ -1,5 +1,5 @@
 {
-    "name": "mybestways/reason",
+    "name": "program-2/reason",
     "description": "A PHP Dependency Injection Container",
     "require": {
         "php": "^7.2"
