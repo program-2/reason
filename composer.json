@@ -1,6 +1,8 @@
 {
     "name": "program-2/reason",
-    "description": "A PHP Dependency Injection Container",
+    "description": "PHP Dependency Injection Container",
+    "license": "Apache-2.0",
+    "keywords": ["dependency", "reason"],
     "require": {
         "php": "^7.2"
     }
