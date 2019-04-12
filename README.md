@@ -39,15 +39,16 @@ How to use it
       ((new Reason)->inject('Class','Method'));
     
 
-4 - Inside the methods use injected $Reason object to get an instance of any dependency:
+4 - Inside the methods use 'injected $Reason object' to get an instance of any class:
 
       $Reason->inject('Class','Method');
     
   (Here the dependencies of dependencies will also be injected as well) 
 
 
-  
+ 
 Notice: 
+
   As there is no access to parameters of methods directly,  
   any needed values can be passed throuth one(1) array of
   keys/values as the third(3rd) parameter position:
@@ -64,8 +65,9 @@ Notice:
  
  
 Notice:
-  It is possible to pass Reason Manually as any of the parameter
-  of the method if the method accepts any paratemer:
+
+  It is possible to make and pass Reason like a parameter
+  if the method accepts any parameter:
   
        ((new Reason)->inject('Class'))->Method(new Reason);
        
@@ -73,8 +75,8 @@ Notice:
   
        $reason = new Reason;
        
-  and reservinge the parameters place for the programing purpose.
-  these ways increase the coupling degree a little.
+  thus reserving the parameter place for the programming purposes,
+  but these ways increase the coupling degree a little.
   
   
 Credit
@@ -84,4 +86,4 @@ Developed by Ehsan Yousefi <mailbox5517@gmail.com> [https://fsdeveloper.ir]
  
 Updates
 -------
-11/4/2019 'version 1.0.0 first Release' - Backwards incompatible
+11/4/2019 'version 1.0.0 first Release' - backwards incompatible

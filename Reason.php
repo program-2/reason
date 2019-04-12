@@ -4,10 +4,10 @@
  * author Ehsan Yousefi 
  * copyright 2019-2025 Ehsan Yousefi <mailbox5517@gmail.com> | https://fsdeveloper.ir
  * license http://www.apache.org/licenses/LICENSE-2.0
- * version 1.0 */
+ * version 1.0.1  */
 class Reason 
 {
-    public static function inject($ClassName, $ClassMethod = 0, $data = null)
+    public function inject($ClassName, $ClassMethod = 0, $data = null)
     { 
         $Reason = "Reason";
         if(!class_exists($ClassName)) {
@@ -16,7 +16,6 @@ class Reason
         
         if($ClassMethod == null){
             $Reason = new Reason;
-            //$ReflectionClass = new ReflectionClass($ClassName);
             return  new $ClassName($Reason);
         }
         $ReflectionMethod = new ReflectionMethod($ClassName, $ClassMethod);
