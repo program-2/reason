@@ -1,23 +1,21 @@
 <?php
 
-/* PHP Dependency Injection
- * author Ehsan Yousefi 
- * copyright 2019-2025 Ehsan Yousefi <mailbox5517@gmail.com> | https://fsdeveloper.ir
- * license http://www.apache.org/licenses/LICENSE-2.0
- * version 1.0.1  */
+/* A Dependency Injection for PHP
+ * Author Ehsan Yousefi 
+ * copyright 2019 Ehsan Yousefi <mailbox5517@gmail.com> | https://fsdeveloper.ir 
+ * version 2.0.0     */
 class Reason 
 {
     public function inject($ClassName, $ClassMethod = 0, $data = null)
     { 
-        $Reason = "Reason";
         if(!class_exists($ClassName)) {
-           throw new Exception($Reason.': class'.var_dump($ClassName).' is not loaded yet.');
+           throw new Exception('Reason'.': class'.var_dump($ClassName).' is not loaded yet.');
+        }
+        if($ClassMethod == null){
+            $ReflectionClass = new ReflectionClass($ClassName);
+            return $ReflectionClass-> newInstance($this);
         }
         
-        if($ClassMethod == null){
-            $Reason = new Reason;
-            return  new $ClassName($Reason);
-        }
         $ReflectionMethod = new ReflectionMethod($ClassName, $ClassMethod);
         $Parameters = $ReflectionMethod->getParameters();
         $j = count($Parameters);
@@ -31,9 +29,26 @@ class Reason
                 if(class_exists($MiddleCheck)) {$Parameter[$i] = $MiddleCheck;}
                 else {$j--;}
         }
-        
-        if($j == 0){
-           $ReflectionMethod->invoke(new $ClassName,  new $Parameter[0], $data );  
+        switch($j){
+        case 0:
+            $ReflectionMethod->invoke(new $ClassName,  new $Parameter[0], $data );  
+            break;
+        case 1:
+            $ReflectionMethod->invoke(new $ClassName, new $Parameter[0],  new $Parameter[1],
+            $data); 
+            break;
+        case 2:
+            $ReflectionMethod->invoke(new $ClassName, new $Parameter[0],  new $Parameter[1], 
+            new $Parameter[2], $data);
+            break;
+        case 3:
+            $ReflectionMethod->invoke(new $ClassName, new $Parameter[0],  new $Parameter[1], 
+            new $Parameter[3],new $Parameter[4], $data);  
+            break;
+        case 4:
+            $ReflectionMethod->invoke(new $ClassName, new $Parameter[0],  new $Parameter[1], 
+            new $Parameter[3],new $Parameter[4], new $Parameter[5], $data);  
+            break;
         }
     }
 }   
