@@ -15,7 +15,7 @@ class Reason
             $ReflectionClass = new ReflectionClass($ClassName);
             
             if($ReflectionClass->getConstructor()){
-            return $ReflectionClass->newInstance($this);
+                return $ReflectionClass->newInstance($this);
             }else{
                 return $ReflectionClass->newInstance();
             }
