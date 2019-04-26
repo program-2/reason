@@ -37,7 +37,6 @@ Load Reason along with all dependency classes in your project.
 -
 
 #### First way 
--
    
    (the **recommended way**; beacause it will not occupy 
 
