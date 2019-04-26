@@ -4,7 +4,7 @@
 
 Reason is a brief dependency injection Container that also supports a direct
 
-object injection mechanism  for PHP of 48 lines,
+object injection mechanism  for PHP of 52 lines,
 
 with no need to any configuration, that uses reflection.
 

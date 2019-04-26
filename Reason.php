@@ -3,7 +3,7 @@
 /* A Dependency Injection for PHP
  * Author Ehsan Yousefi 
  * copyright 2019 Ehsan Yousefi <mailbox5517@gmail.com> | https://fsdeveloper.ir 
- * version 2.0.0     */
+ * version 2     */
 class Reason 
 {
     public function inject($ClassName, $ClassMethod = 0, $data = null)
@@ -13,7 +13,12 @@ class Reason
         }
         if($ClassMethod == null){
             $ReflectionClass = new ReflectionClass($ClassName);
-            return $ReflectionClass-> newInstance($this);
+            
+            if($ReflectionClass->getConstructor()){
+            return $ReflectionClass->newInstance($this);
+            }else{
+                return $ReflectionClass->newInstance();
+            }
         }
         
         $ReflectionMethod = new ReflectionMethod($ClassName, $ClassMethod);
@@ -52,3 +57,4 @@ class Reason
         }
     }
 }   
+
