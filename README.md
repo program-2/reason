@@ -37,6 +37,7 @@ Load Reason along with all dependency classes in your project.
 -
 
 #### First way 
+-
    
    (the **recommended way**; beacause it will not occupy 
 
@@ -74,7 +75,7 @@ Load Reason along with all dependency classes in your project.
 
 
 #### Second way
-
+-
    (calling a method and injecting the type-hinted Reason)     
 
 
@@ -119,7 +120,7 @@ Load Reason along with all dependency classes in your project.
 
       
 #### Third way 
-
+-
    (use it for "up to 5 direct object injection" only if your dependency
    
    classes themselves are independent so they don't have Reason inside)
