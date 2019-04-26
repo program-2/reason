@@ -19,21 +19,22 @@ a control flow with inputs to their destination.
 
 ### Aims
 
-1-to be as small as possible.
+1- to be as small as possible.
 
-2-to be able to handle the dependency of a dependency. 
+2- to be able to handle the dependency of a dependency. 
 
-3-to be fast. reflection is much faster than annotation.
+3- to be fast. reflection is much faster than annotation.
 
 
 ### Instalation
 
 Load Reason along with all dependency classes in your project.
 
-
-
+-
+-
 ### How to use it (3 ways explained)
-
+-
+-
 
 #### First way 
    
@@ -65,7 +66,7 @@ Load Reason along with all dependency classes in your project.
     
    example:
    
-     $obj = $Reason->inject('DataBase');
+     $obj = $Reason->inject('DataBaseClass');
      
      $obj->query(..);
      
@@ -74,7 +75,7 @@ Load Reason along with all dependency classes in your project.
 
 #### Second way
 
-      (calling a method and injecting the type-hinted Reason)     
+   (calling a method and injecting the type-hinted Reason)     
 
 
 1- Put "Reason $Reason" as parameter of the **method**: 
@@ -140,7 +141,7 @@ Load Reason along with all dependency classes in your project.
 
       $Class;
     
-   (Here the dependencies of dependencies will also be injected as well) 
+   
  
    
  
