@@ -35,7 +35,7 @@ Load Reason along with all dependency classes in your project.
 How to use it (3 ways explained)
 --------------------------------
 
----First way (the recommended way; beacause it will not occupy 
+   <First way> (the recommended way; beacause it will not occupy 
 
    the parameters palce of methods, it only occupies parameters 
    
@@ -70,7 +70,7 @@ How to use it (3 ways explained)
    (Here the dependencies of dependencies will also be injected as well)
 
 
----Second way (calling a method and injecting the type-hinted Reason)     
+   <Second way> (calling a method and injecting the type-hinted Reason)     
 
 
 1- Put "Reason $Reason" as parameter of the method: 
@@ -113,7 +113,7 @@ Notice:
 
 
       
----Third way (use it for "up to 5 direct object injection" only if your dependency
+   <Third way> (use it for "up to 5 direct object injection" only if your dependency
    
    classes themselves are independent so they don't have Reason inside)
 
@@ -165,4 +165,5 @@ Developed by Ehsan Yousefi <mailbox5517@gmail.com> [https://fsdeveloper.ir]
 Updates
 -------
 " 8/4/2019 1.0.0 first release" - Backwards incompatible
+
 "25/4/2019 2.0.0 new features added >> ways(No.1 & No.3)" - Backwards incompatible
