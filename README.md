@@ -1,7 +1,7 @@
-# Reason - A PHP Dependency Injection Container
+## Reason  A PHP Dependency Injection Container
 
-Introduction
-------------
+### Introduction
+
 Reason is a brief dependency injection Container that also supports a direct
 
 object injection mechanism  for PHP of 48 lines,
@@ -17,8 +17,8 @@ a control flow with inputs to their destination.
 
 
 
-Aims
-----
+### Aims
+
 1-to be as small as possible.
 
 2-to be able to handle the dependency of a dependency. 
@@ -26,23 +26,25 @@ Aims
 3-to be fast. reflection is much faster than annotation.
 
 
-Instalation
------------
+### Instalation
+
 Load Reason along with all dependency classes in your project.
 
 
 
-How to use it (3 ways explained)
---------------------------------
+### How to use it (3 ways explained)
 
-   <First way> (the recommended way; beacause it will not occupy 
+
+#### First way 
+   
+   (the **recommended way**; beacause it will not occupy 
 
    the parameters palce of methods, it only occupies parameters 
    
-   place of construct method which is for dependency injection purposes.)
+   place of construct method which is allocated for dependency injection purposes.)
 
 
-1- Put "Reason $Reason" as parameter of the construc method of the class: 
+1- Put "Reason $Reason" as parameter of the **construc method** of the class: 
       
       public function __construct(Reason $Reason)
       {
@@ -70,10 +72,12 @@ How to use it (3 ways explained)
    (Here the dependencies of dependencies will also be injected as well)
 
 
-   <Second way> (calling a method and injecting the type-hinted Reason)     
+#### Second way
+
+      (calling a method and injecting the type-hinted Reason)     
 
 
-1- Put "Reason $Reason" as parameter of the method: 
+1- Put "Reason $Reason" as parameter of the **method**: 
       
       public function Method(Reason $Reason)
       {
@@ -93,7 +97,7 @@ How to use it (3 ways explained)
    (Here the dependencies of dependencies will also be injected as well) 
 
     
-Notice: 
+**Notice:** 
 
    As you don't have access to pass parameters to methods directly  
    
@@ -113,12 +117,14 @@ Notice:
 
 
       
-   <Third way> (use it for "up to 5 direct object injection" only if your dependency
+#### Third way 
+
+   (use it for "up to 5 direct object injection" only if your dependency
    
    classes themselves are independent so they don't have Reason inside)
 
 
-1- Put "AnyClass $AnyClass" as parameter of the method: 
+1- Put "AnyClass $AnyClass" as parameter of the **method**: 
       
       public function Method(Class $Class)
       {
@@ -138,7 +144,7 @@ Notice:
  
    
  
-Notice:
+**Notice:**
 
    It is possible to pass Reason Manually like any of the parameter
   
@@ -152,18 +158,18 @@ Notice:
   
    thus reserving the parameters place for the programing purpose,
   
-   but ways increase the coupling degree a little.
+   but ways increase the **coupling degree** a little.
   
   
 
-Credit
-------
+### Credit
+
 Developed by Ehsan Yousefi <mailbox5517@gmail.com> [https://fsdeveloper.ir]
  
  
 
-Updates
--------
+### Updates
+
 " 8/4/2019 1.0.0 first release" - Backwards incompatible
 
 "25/4/2019 2.0.0 new features added >> ways(No.1 & No.3)" - Backwards incompatible
