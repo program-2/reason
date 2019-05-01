@@ -120,17 +120,23 @@ Load Reason along with all dependency classes in your project.
       
 #### Third way 
 
-   (use it for "up to 5 direct object injection" only if your dependency
+   ( use it for  "unlimitted number of direct object injection"  only if your dependency
    
-   classes themselves are independent so they don't have Reason inside)
+   classes themselves are independent so they don't have Reason inside their own class definition.
+   
+   Please note that Reason itself can be among these type-hinted classes. )
 
 
-1- Put "AnyClass $AnyClass" as parameter of the **method**: 
+1- Put "AnyDependencyClass   $AnyDependencyClass" as parameter of the **method**: 
       
-      public function Method(Class $Class)
+      Class 
       {
-        //
+          public function Method(Class1 $Class1, Class2 $Class2, Reason $Reason, ...)
+          {
+            //
+          }
       }
+      
 
 2- Instantiate the methods where/when needed with "Reason":
     
@@ -139,10 +145,11 @@ Load Reason along with all dependency classes in your project.
 
    Inside the methods directly use your injected object:
 
-      $Class;
+      $Class1;
+      
+      $Class2;
     
-   
- 
+      $Reason;
    
  
 **Notice:**
