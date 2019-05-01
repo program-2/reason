@@ -1,19 +1,19 @@
-## Reason  A PHP Dependency Injection Container
+## Reason  A PHP Dependency Injection Class
 
 ### Introduction
 
-Reason is a brief dependency injection Container that also supports a direct
+Reason is a brief dependency injection Class that also supports a direct
 
-object injection mechanism  for PHP of 52 lines,
+object injection system for PHP of 36 lines,
 
-with no need to any configuration, that uses reflection.
+with no need to configuration, that uses reflection.
 
 
 It can  also be used for the last part of 
 
-an Inversion Of Control (IOC) system to route
+an Inversion Of Control (IoC) system to route
 
-a control flow with inputs to their destination.
+a control flow and inputs to their destination.
 
 
 
@@ -72,6 +72,7 @@ Load Reason along with all dependency classes in your project.
      
    (Here the dependencies of dependencies will also be injected as well)
 
+-
 
 #### Second way
 
@@ -116,7 +117,7 @@ Load Reason along with all dependency classes in your project.
    
       $john;
 
-
+-
       
 #### Third way 
 
