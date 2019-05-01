@@ -11,7 +11,7 @@ with no need to configuration, that uses reflection.
 
 It can  also be used for the last part of 
 
-an Inversion Of Control (IoC) system to route
+an Inversion of Control (IoC) system to route
 
 a control flow and inputs to their destination.
 
@@ -73,6 +73,7 @@ Load Reason along with all dependency classes in your project.
    (Here the dependencies of dependencies will also be injected as well)
 
 -
+-
 
 #### Second way
 
@@ -117,6 +118,7 @@ Load Reason along with all dependency classes in your project.
    
       $john;
 
+-
 -
       
 #### Third way 
